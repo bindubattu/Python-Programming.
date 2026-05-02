@@ -1,0 +1,13 @@
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+largest = float('-inf')
+second = float('-inf')
+for i in range(len(nums)):
+    if nums[i] > largest:
+        second = largest
+        largest = nums[i]
+    elif nums[i] > second and nums[i] != largest:
+        second = nums[i]
+if second == float('-inf'):
+    print("No second largest number")
+else:
+    print("Second largest =", second)
